@@ -8,7 +8,7 @@ trait Complex {
 }
 
 object Complex {
-  def apply(re:Double, im:Double):Complex = ??? // Fill here
+  def apply(re:Double, im:Double):Complex = ComplexImpl(re,im)
 }
 
 object TryComplex extends App {
@@ -17,6 +17,9 @@ object TryComplex extends App {
   println(c, c.re, c.im) // (ComplexImpl(18.0,21.0),18.0,21.0)
   val c2 = a(0) * a(1)
   println(c2, c2.re, c2.im) // (ComplexImpl(-10.0,30.0),-10.0,30.0)
+
+  println(c2.equals(Complex(-10.0,30.0)))
+  println(c2.toString)
 }
 
 /** Hints:
